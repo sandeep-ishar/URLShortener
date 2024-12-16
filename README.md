@@ -14,7 +14,7 @@ The project is structured with separate layers (Domain, Application, Infrastruct
 	6. Testing
 	7. Scalability Options
 
-1. Project Overview
+##1. Project Overview
 
 This application provides the following core functionalities:
 
@@ -24,7 +24,7 @@ This application provides the following core functionalities:
 	1.2 Resolve a Short URL:
 	Resolves the short ID to its corresponding original URL.
 
-2. Architecture
+##2. Architecture
 
 The project follows the Clean Architecture pattern, ensuring that each layer has clear responsibilities and no tight coupling.
 
@@ -37,12 +37,12 @@ The project follows the Clean Architecture pattern, ensuring that each layer has
 The dependecies flow towards the Domain Layer.
 	Domain <--- Application <--- Infrastructure <--- API
 
-3. Logic for Short ID Generation
+##3. Logic for Short ID Generation
 	3.1 The logic generates new GUID which ensures randamness and are unlikely to collide. 
 	3.2 The GUID is converted into Base64 string and the non url friendly characters are removed
 	3.3 Then the first 8 characters are picked and this is stored against the long url.
 
-4. Setup Instructions
+##4. Setup Instructions
        4.1 Assumptions: .Net 7.0 SDK installed, Visual Sudio IDE installed.
        4.2 Clone the Repository from the git link. (https://github.com/sandeep-ishar/URLShortener)
        4.3 Restore Dependencies either by right clicking on the solution or in the terminal, type ""dotnet restore"".
@@ -52,7 +52,7 @@ The dependecies flow towards the Domain Layer.
        4.7 Optional: ShortDomain can be setup in appsettings.json to match the your-domain format(http://<your_domain>/<short_id>).
 	           - Default has been set to "ShortDomain": "http://www.testdomain.com/".		
 
-5.Sample Input and Output  - API Endpoints 
+##5.Sample Input and Output  - API Endpoints 
 	1. Shorten URL
 		Endpoint: POST /api/shorten
 		Description: Accepts a URL and generates a short ID.
@@ -74,12 +74,12 @@ The dependecies flow towards the Domain Layer.
 						"originalUrl": "https://www.google.com"
          		      }
 
-""6. Testing""
+##6. Testing
 	The project includes unit tests for both Application and Infrastructure layers:
 	1. Run all Tests from terminal - dotnet test
 	2. If using UI, Right click and click on run test on the respective test projects.
 
-""7. Scalability Options""
+##7. Scalability Options
      Below are the few options to scale this application:
 
 		Persistent Storage: Replace InMemoryUrlRepository with a database-based repository:
