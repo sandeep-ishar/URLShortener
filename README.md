@@ -71,7 +71,9 @@ The dependecies flow towards the Domain Layer.
 						  "shortId": "uxbI2s7m",
 						  "shortUrl": "http://localhost:38806//uxbI2s7m"
 						}
-   2. Resolve Short URL
+       
+	
+        2. Resolve Short URL
 		Endpoint: GET /api/{shortId}
 		Description: Resolves the short ID to its original URL.
 		Example Request Body : /api/bw7xqbIL (Use Swagger UI to test)
