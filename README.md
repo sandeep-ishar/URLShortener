@@ -6,6 +6,8 @@ and retrieve the original URL by its shortened ID.
 The project is structured with separate layers (Domain, Application, Infrastructure, and API), ensuring clean separation of concerns and scalability.
 
 #Table of Contents
+
+
 	1. Project Overview
 	2. Architecture
 	3. Logic for Short ID Generation
