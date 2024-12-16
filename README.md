@@ -38,11 +38,15 @@ The dependecies flow towards the Domain Layer.
 	Domain <--- Application <--- Infrastructure <--- API
 
 ##3. Logic for Short ID Generation
+
+
 	3.1 The logic generates new GUID which ensures randamness and are unlikely to collide. 
 	3.2 The GUID is converted into Base64 string and the non url friendly characters are removed
 	3.3 Then the first 8 characters are picked and this is stored against the long url.
 
 ##4. Setup Instructions
+
+
        4.1 Assumptions: .Net 7.0 SDK installed, Visual Sudio IDE installed.
        4.2 Clone the Repository from the git link. (https://github.com/sandeep-ishar/URLShortener)
        4.3 Restore Dependencies either by right clicking on the solution or in the terminal, type ""dotnet restore"".
@@ -53,6 +57,8 @@ The dependecies flow towards the Domain Layer.
 	           - Default has been set to "ShortDomain": "http://www.testdomain.com/".		
 
 ##5.Sample Input and Output  - API Endpoints 
+
+
 	1. Shorten URL
 		Endpoint: POST /api/shorten
 		Description: Accepts a URL and generates a short ID.
@@ -75,6 +81,8 @@ The dependecies flow towards the Domain Layer.
          		      }
 
 ##6. Testing
+
+
 	The project includes unit tests for both Application and Infrastructure layers:
 	1. Run all Tests from terminal - dotnet test
 	2. If using UI, Right click and click on run test on the respective test projects.
